@@ -3,33 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EXPERIMENT-1</title>
+    <title>TABLES</title>
+    
 </head>
-<body bgcolor="skyblue" text="brown">
-    <h1>MY INTRODUCTION</h1>
-   <P> HELLO EVERYONE, I AM <i>ADITYA AMAN JHA</i> FROM <U>CSE12</U> AND THIS IS MY FIRST WEBPAGE WHERE I WILL BE PERFORMING <B>AN EXPERIMENT</B> WHICH WILL INCLUDE SOME OF THE LESSONS I HAVE LEARNT IN TODAY'S CLASS.</P>
-
-   <H2>WHAT I HAVE LEARNT TODAY?</H2>
- <ol type="A">
-<li>Use of Headings</li>
-<li>Paragraphs</li>
-<li>Text Formatting</li>
-<li>Hyperlink tag</li>
-<li>Types of Lists</li>
- </ol>
- <h3>Let's have a closure look towards what we have learnt in  types of lists and how many types are there.</h3>
- <ul>
-<li>Ordered list</li>
-<li>Unordered list</li>
-<li>Mixed list</li>
-<li>Nested list </li>
-<li>Descriptive list</li>
- </ul>
-
-<h3>What is HYPERLINK TAG and how we use this? </h3>
-<dl>
-<dt><b>HYPERLINK TAG</b></dt>
-<dd>The hyperlink tag in HTML is the <a> (anchor) tag, used to create clickable links that direct users to other web pages, documents, or different parts of the same page. It requires the href attribute to specify the destination URL and can include the target attribute to control if the link opens in a new tab (_blank) or the same window (_self)</dd>
-</dl>
+<body bgcolor="yellow">
+    <H1>EXPERIMENT WITH TABLES</H1>
+<table border="2" cellpadding="40" cellspacing="">
+<caption>CLASS TIMETABLE(CSE12)</caption>
+<TR>
+<TH>DAY</TH>
+<TH>8:50-9:40</TH>
+<TH>9:40-10:30</TH>
+<th>10:40-11:30</th>
+<TH>11:30-12:20</TH>
+<TH>12:20-1:10</TH>
+</TR>
+<TR>
+<TH>MONDAY</TH>
+<TD>AI</TD>
+<TD>MATHS</TD>
+<TD>APPLIED PHYSICS</TD>
+<TD>ELECTRICAL</TD>
+<TD rowspan="5">BREAK</TD>
+</TR>
+<TR>
+<TH>TUESDAY</TH>
+<TD colspan="2">APPLIED PHYSICS LAB</TD>
+<TD>APPLIED PHYSICS</TD>
+<TD>MATHS</TD>
+</TR>
+<TR>
+<TH>WEDNESDAY</TH>
+<TD>MATHS</TD>
+<TD>EVS</TD>
+<TD colspan="2">CAD LAB</TD>
+</TR>
+<TR>
+<TH>THURSDAY</TH>
+<TD colspan="2">DSA CLASS</TD>
+<TD>MATHS</TD>
+<TD>APPLIED PHYSICS</TD>
+</TR>
+<TR>
+<TH>FRIDAY</TH>
+<TD colspan="2">ELECTRICAL LAB</TD>
+<TD>ELECTRICAL</TD>
+<TD>WEB DEV</TD>
+</TR>
+<TR>
+    <TD colspan="6">&COPY;ADITYA AMAN JHA: ABES ENGINEERING COLLEGE: CSE12</TD>
+</TR>
+</table>
 </body>
 </html>
