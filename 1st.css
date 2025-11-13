@@ -1,0 +1,26 @@
+#he {color: aqua;
+font-size: large;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+border: 20px;
+padding: 22px;
+margin: auto;}
+
+
+#hehe {color: aquamarine;
+font-size: x-large;
+font-family: fantasy;
+border: 30px;
+padding: 25px;
+margin: 20px;
+}
+#hehehe {color: rgb(127, 255, 138);
+font-size: medium;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+border: 25px;
+padding: 25px;
+margin: 20px;
+
+}
+.hello {
+    background-color: bisque;
+}
