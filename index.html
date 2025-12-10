@@ -1,79 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STUDENT PROFILE CARD</title>
-  <style>
-    body{
-      font-family: 'Times New Roman', Times, serif;
-      margin: 20px;
-      background: antiquewhite;
-    }
-    h2{
-      text-align: center;
-      color: brown;
-    }
-    .container{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items:center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .card{
-      background: aquamarine;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px black;
-      width: 220px;
-      text-align: center;
-      padding: 20px;
-    }
-    .avatar{
-      width: 70px;
-      height: 70px;
-      background: yellow;
-      color: red;
-      border-radius: 50%;
-      display: flex;
-      font-size: 20px;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto 12px;
-    }
-    .name {
-      font-size: 20px;
-      font-weight: bold;
-    }
-    .details{font-size: 15px;
-    color: blue; margin: 2px;}
-  </style> 
-</head>
-<body>
-  <h2>STUDENT PROFILE CARDS</h2>
-  <div class="container">
-<div class="card">
-    <div class="avatar">AAJ</div> 
-      <div class="name">Aditya Aman Jha</div>
-      <p class="details">B.Tech-CSE</p>
-      <p class="details">1st Year</p>
-      <p class="details">2025B01011355</p>
-</div>
-<div class="card">
-    <div class="avatar">SJ</div> 
-      <div class="name">Shrinidhi Jha</div>
-      <p class="details">B.Tech-CSE</p>
-      <p class="details">1st Year</p>
-      <p class="details">2025B0101987</p>
-</div>
-<div class="card">
-    <div class="avatar">PS</div> 
-      <div class="name">Priyanshu Singh</div>
-      <p class="details">B.Tech-IT</p>
-      <p class="details">1st Year</p>
-      <p class="details">2025B01023456</p>
-</div>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRODUCT GRID</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 20px;
+            background: aliceblue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+            padding:10px;
+            background: goldenrod;
+            display: block;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .products {
+            background: yellow;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px black;
+            padding: 16px;
+            text-align: center;
+        }
+        .products img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius:8px;
+            margin-bottom: 2px;
+        }
+        .products h3 {
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 18px;
+            margin: 8px 0 0;
+        }
+        .products p{
+            color: grey;
+            font-size: 14px;
+            margin: 4px;
+        }
+        @media (max-width: 1024px){
+            .container{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px){
+            .container{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <h1>RESPONSIVE PRODUCT GRID</h1>
+    <div class="container">
+      <div class="products">
+        <img src="Plastic-vs.-Carton-Packaging-1198x1198.jpg" alt="Product1" />
+        <h3>Toned Milk</h3>
+        <p>Various health benefits</p>
+        <p style="font-weight: bold; color: brown; font-size: 12px; margin: 4px;">Price: $4</p>
+      </div>
+      <div class="products">
+        <img src="Strawberry-ice-cream-recipe-easy.jpg" alt="Product1" />
+        <h3>Strawberry Icecream</h3>
+        <p>Made with pure milk and strawberries.</p>
+        <p style="font-weight: bold; color: brown; font-size: 12px; margin: 4px;">Price: $6</p>
+      </div>
+      <div class="products">
+        <img src="images.jpeg" alt="Product1" />
+        <h3>Strawberry Lassi</h3>
+        <p>Made with pure milk.</p>
+        <p style="font-weight: bold; color: brown; font-size: 12px; margin: 4px;">Price: $5</p>
+      </div>
+      <div class="products">
+        <img src="image21.jpg" alt="Product1" />
+        <h3>Cheese Slices</h3>
+        <p>No harmful preservatives.</p>
+        <p style="font-weight: bold; color: brown; font-size: 12px; margin: 4px;">Price: $8</p>
+      </div>
+    </div>
+  </body>
 </html>
