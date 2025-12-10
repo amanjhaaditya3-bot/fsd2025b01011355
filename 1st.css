@@ -1,26 +1,45 @@
-#he {color: aqua;
-font-size: large;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-border: 20px;
-padding: 22px;
-margin: auto;}
-
-
-#hehe {color: aquamarine;
-font-size: x-large;
-font-family: fantasy;
-border: 30px;
-padding: 25px;
-margin: 20px;
+header {
+    display: block;
+    background: green;
+    padding: 10px;
+    text-align: center;
+    color: yellow;
 }
-#hehehe {color: rgb(127, 255, 138);
-font-size: medium;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-border: 25px;
-padding: 25px;
-margin: 20px;
+header span { 
+  display: inline; 
+  color: red; 
+} 
+.inline-block-menu ul {
+list-style: none;
+padding: 0;
 
 }
-.hello {
-    background-color: bisque;
+.inline-block-menu li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.inline-block-menu a{
+    text-decoration: none;
+    padding: 5px;
+    background: rgb(110, 112, 154);
+    color: antiquewhite;
+}
+.float-menu ul{
+    list-style: none;
+    padding: 0px;
+}
+.float-menu li{
+    float: left;
+    margin-right: 10px;
+
+}
+.float-menu a{
+    text-decoration: none;
+    padding: 5px;
+    background: lightgreen;
+    color: black;
+}
+.clear{
+    clear: both;
 }
