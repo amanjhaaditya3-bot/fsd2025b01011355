@@ -1,27 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-commerce product page</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="site-header"> 
-    <h1>MY CLOTHING STORE</h1> 
-  </header> 
-    <main class="container">
-      <section class="product">
-        <img class="tshirt" src="tshirt.avif" alt="product">
-        <h2 class="product-title">H&M OLIVE GREEN TSHIRT</h2>
-        <p class="product-description">Soft, Comfortable, Breathable cotton.</p>
-        <div class="price-chart">
-          <span class="price">$30</span>
-          <span class="old-price">$50</span>
-        </div>
-
-        <button class="add-cart">Add to Cart</button>
-      </section>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STUDENT PROFILE CARD</title>
+  <style>
+    body{
+      font-family: 'Times New Roman', Times, serif;
+      margin: 20px;
+      background: antiquewhite;
+    }
+    h2{
+      text-align: center;
+      color: brown;
+    }
+    .container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items:center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card{
+      background: aquamarine;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px black;
+      width: 220px;
+      text-align: center;
+      padding: 20px;
+    }
+    .avatar{
+      width: 70px;
+      height: 70px;
+      background: yellow;
+      color: red;
+      border-radius: 50%;
+      display: flex;
+      font-size: 20px;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 12px;
+    }
+    .name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .details{font-size: 15px;
+    color: blue; margin: 2px;}
+  </style> 
+</head>
+<body>
+  <h2>STUDENT PROFILE CARDS</h2>
+  <div class="container">
+<div class="card">
+    <div class="avatar">AAJ</div> 
+      <div class="name">Aditya Aman Jha</div>
+      <p class="details">B.Tech-CSE</p>
+      <p class="details">1st Year</p>
+      <p class="details">2025B01011355</p>
+</div>
+<div class="card">
+    <div class="avatar">SJ</div> 
+      <div class="name">Shrinidhi Jha</div>
+      <p class="details">B.Tech-CSE</p>
+      <p class="details">1st Year</p>
+      <p class="details">2025B0101987</p>
+</div>
+<div class="card">
+    <div class="avatar">PS</div> 
+      <div class="name">Priyanshu Singh</div>
+      <p class="details">B.Tech-IT</p>
+      <p class="details">1st Year</p>
+      <p class="details">2025B01023456</p>
+</div>
+  </div>
+</body>
 </html>
