@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPOTIFY</title>
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+ background:black ;
+ color: white;
+ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container{
+    display: flex;
+    height: calc(100vh - 80px);
+}
+.sidebar {
+      width: 220px;
+      background-color: #000;
+      padding: 20px 15px;
+      border-right: 1px solid #222;
+    }
+.logo-section{
+    font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+}    
+.logo{
+    width: 30px;
+    height: 30px;
+    background: rgb(14, 175, 234);
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #000;
+}
+.logo:hover{
+       background-color: rgb(223, 7, 7);
+    }
+.nav {
+      margin-bottom: 25px;
+    }
+.nav-item {
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: grey;
+      cursor: pointer;
+      background: white;
+      border-radius: 4px;
+      padding: 5px;
+    }
+.nav-item:hover {
+      color: rgb(14, 175, 234);
+    } 
+.playlist-item{
+    margin-bottom: 10px;
+      font-size: 15px;
+      color: grey;
+      cursor: pointer;
+      background: white;
+      border-radius: 4px;
+      padding: 5px;
+}
+.myplaylist{
+    margin-bottom: 10px;
+    background: rgb(14, 175, 234);
+    text-align: center;
+    border-radius: 4px;
+    font-family: 'Times New Roman', Times, serif;
+} 
+
+.myplaylist:hover{
+       background-color: rgb(223, 7, 7);
+    } 
+.playlist-item:hover{
+ color: rgb(14, 175, 234);
+ 
+} 
+
+.main {
+      flex: 1;
+      background: #121212;
+      padding: 20px;
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .arrows {
+      display: flex;
+      gap: 10px;
+    }
+
+    .arrow-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: rgb(14, 175, 234);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .profile:hover{
+       background-color: rgb(223, 7, 7);
+    }
+
+    .profile-circle {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+    }
+     .section {
+      margin-bottom: 25px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .card-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .a{
+      text-decoration: none;
+      
+    }
+
+    .card {
+      width: 150px;
+      background-color: #181818;
+      border-radius: 8px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      background-color:rgb(14, 175, 234);
+    }
+
+    .card-image IMG {
+      width: 100%;
+      height: 130px;
+      background-color: #333;
+      border-radius: 6px;
+    
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    .card-name {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      color: #b3b3b3;
+    }
+    .player {
+      height: 80px;
+      background-color: #181818;
+      border-top: 1px solid #282828;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 15px;
+    }
+
+    .player-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .player-cover img{
+      width: 50px;
+      height: 50px;
+      background-color: #333;
+       border-radius: 4px;
+      /*display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px; */
+    }
+
+    .player-song {
+      font-size: 13px;
+    }
+
+    .player-song span {
+      display: block;
+    }
+
+    .player-song .name {
+      font-weight: 600;
+    }
+
+    .player-song .artist {
+      font-size: 11px;
+      color: #b3b3b3;
+    }
+
+    .player-center {
+      text-align: center;
+    }
+
+    .player-buttons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    .play-main {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: #fff;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .play-main:hover{
+      background: red;
+    }
+
+    .player-time {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: #b3b3b3;
+    }
+
+    .progress {
+      width: 200px;
+      height: 4px;
+      background-color: beige;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      width: 40%;
+      height: 100%;
+      background-color:rgb(14, 175, 234);
+    }
+
+    .player-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #b3b3b3;
+    }
+
+    .volume {
+      width: 80px;
+      height: 4px;
+      background-color: beige;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .volume-fill {
+      width: 60%;
+      height: 100%;
+      background-color:rgb(14, 175, 234);
+    }
+     @media (max-width: 600px) {
+      .sidebar {
+        display: none;
+      }
+    }
+
+   
+    </style>
+  </head>
+ 
+  <body>
+
+    <div class="container">
+      <div class="sidebar">
+        <div class="logo-section">
+          <div class="logo">🎷</div>
+          <span>Hexa</span>
+        </div>
+        <div class="nav">
+          <div class="myplaylist">All</div>
+          <div class="nav-item">🏡 Home</div>
+          <div class="nav-item">🔍 Search</div>
+          <div class="nav-item">📖 Your Library</div>
+        </div>
+        <div>
+          <div class="myplaylist">Playlists</div>
+        <div class="playlist-item">Liked Songs</div>
+          <div class="playlist-item">Your Episodes</div>
+          <div class="playlist-item">Peace</div>
+          <div class="playlist-item">Good Stuffs</div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="top-bar">
+          <div class="arrows">
+            <button class="arrow-btn"><a href="spotify2.html">&lt;</a></button>
+            <button class="arrow-btn"><a href="spotify6.html">&gt;</a></button>
+          </div>
+          <div class="profile">
+            <div class="profile-circle">Aa</div>
+            <span>Aditya Aman Jha</span>
+          </div>
+        </div>
+
+        
+       <div class="section">
+        <div class="section-title">Your Vibes🔥</div>
+        <div class="card-row">
+          <div class="card">
+            <div class="card-image"><img src="dweekly2.PNG" alt="1"></div>
+            <a href="spotify5.html">Discover Weekly</a>
+            <div class="card-desc">Your weekly recap.</div>
+          </div>
+          <div class="card">
+            <div class="card-image"><img src="ab67616d00001e02e755371ff84826b07ee083c8.jpeg" alt="2"></div>
+            <a href="spotify4.html">Workout Mix</a>
+            <div class="card-desc">Push your limits.</div>
+          </div>
+          <div class="card">
+            <div class="card-image"><img src="ab67706f00000002112e840e5ce7ba74494db655.jpeg" alt="3"></div>
+            <a href="spotify3.html">Bollywood Mush</a>
+            <div class="card-desc">Background score to your love story.</div>
+          </div>
+          <div class="card">
+            <div class="card-image"><img src="86c99837856a8b93be4755007b91520f.jpg" alt="4"></div>
+            <a href="spotify7.html">Indie India</a>
+            <div class="card-desc">Best of the Indian Indie scene.</div>
+          </div>
+        </div>
+        <div class="section">
+        <div class="section-title">Made for you🤝</div>
+        <div class="card-row">
+          <div class="card">
+            <div class="card-image"><img src="images.jpeg" alt="🙂"></div>
+           <a href="spotify6.html">Happy Lives</a>
+            <div class="card-desc">For your happy-happy mood.</div>
+          </div>
+          <div class="card">
+            <div class="card-image"><img src="ab67616d0000b2735eb94ce964067dd706a1b5ed.jpeg" alt="🥰"></div>
+            <a href="spotify8.html">Romentic touch</a>
+            <div class="card-desc">Your 11:11 playlist.</div>
+          </div>
+          <div class="card">
+            <div class="card-image"><img src="images (1).jpeg" alt="😔"></div>
+            <a href="spotify9.html">Memories</a>
+            <div class="card-desc">Don't remember them alone.</div>
+          </div>
+          <div class="card">
+            <div class="card-image"><img src="trending-now-3d-headline-text-vector.jpg" alt="📈"></div>
+            <a href="spotify10.html">Trending Now</a>
+            <div class="card-desc">What people around you listen frequently.</div>
+          </div>
+        </div>
+      </div>
+      <audio id="audio" src="song1.mp3"></audio>
+       <div class="player">
+    <div class="player-left">
+      <div class="player-cover"><img src="maxresdefault.jpg" alt="🎵"></div>
+      <div class="player-song">
+        <span class="name">Sahiba</span>
+        <span class="artist">Aditya Rikhari</span>
+      </div>
+    </div>
+
+    <div class="player-center">
+      <div class="player-buttons">
+        <span>⏮</span>
+        <div class="play-main">▶</div>
+        <span>⏭</span>
+      </div>
+     <div class="player-time">
+  <span id="currentTime">0:00</span>
+  <div class="progress">
+    <div class="progress-fill"></div>
+  </div>
+  <span id="duration">0:00</span>
+</div>
+    </div>
+
+    <div class="player-right">
+  <span>🔊</span>
+  <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
